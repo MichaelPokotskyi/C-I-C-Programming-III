@@ -15,63 +15,63 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\Coin.cpp">
+    <ClCompile Include="Coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\DeliveryChute.cpp">
+    <ClCompile Include="DeliveryChute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\Product.cpp">
+    <ClCompile Include="Product.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\ProductButton.cpp">
+    <ClCompile Include="ProductButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\ProductRack.cpp">
+    <ClCompile Include="ProductRack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\StatusPanel.cpp">
+    <ClCompile Include="StatusPanel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\TestFramework.cpp">
+    <ClCompile Include="TestFramework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\UnitTest.cpp">
+    <ClCompile Include="UnitTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\VendingMachine.cpp">
+    <ClCompile Include="VendingMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\Coin.h">
+    <ClInclude Include="Coin.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\DeliveryChute.h">
+    <ClInclude Include="DeliveryChute.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\Product.h">
+    <ClInclude Include="Product.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\ProductButton.h">
+    <ClInclude Include="ProductButton.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\ProductRack.h">
+    <ClInclude Include="ProductRack.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\StatusPanel.h">
+    <ClInclude Include="StatusPanel.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\TestFramework.h">
+    <ClInclude Include="TestFramework.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\UnitTest.h">
+    <ClInclude Include="UnitTest.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\ARC_M\C3_U09662201\project1\VendingMachine.h">
+    <ClInclude Include="VendingMachine.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
