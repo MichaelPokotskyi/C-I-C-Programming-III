@@ -3,18 +3,24 @@ using namespace std;
 
 class Date {
 private:
+    // object fields
     int Month;
     int Day;
     int Year;
 
 public:
     // constructor
-    Date(int month, int day, int year) {
-        this->Month = month;
-        this->Day = day;
-        this->Year = year;
+    Date(int Month, int Day, int Year) {
+        this->Month = Month;
+        this->Day = Day;
+        this->Year = Year;
     }
-    //setters
+    // destructor
+    ~Date() 
+    {
+        //obj terminated here
+    }
+    // setters
     void setMonth(int month) {
         this->Month = month;
     }
@@ -36,7 +42,6 @@ public:
     }
     // display
     void display() {
-        //cout << date.getMonth() << date.getDay() << date.getYear();
         cout << getMonth() << getDay() << getYear();
     }
 };
