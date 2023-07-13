@@ -7,7 +7,7 @@
 // Win10, Visual C++ 2022, ISO C17
 
 // Date class representing a month, day, and year with its testing.
-// Extended with monthValidation() private method to reuse validation piece 
+// Extended with monthValidation() private method to reuse validation piece
 // of code.
 
 
@@ -28,8 +28,8 @@ private:
     void monthValidation(int Month) {
         if (Month < 1 || Month > 12) {
             this->Month = DEFAULT_MONTH;
-            cerr << "1-12 expected for Month but " << Month 
-                << " found. Will be set to default value '1'." << "\n";
+            cerr << "Range 1-12 expected for Month but " << Month 
+                << " found. Month will set to default value '1'." << "\n";
         }
         else {
             this->Month = Month;
@@ -73,7 +73,7 @@ public:
 };
 
 int main() {
-    // tests obj instansiation
+    // test obj instansiation
     Date d1(12, 31, 2023); // OK values
     d1.display();
 
