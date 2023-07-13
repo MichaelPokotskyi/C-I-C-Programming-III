@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="DeliveryChute.cpp" />
+    <ClCompile Include="HW1.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
