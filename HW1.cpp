@@ -6,7 +6,7 @@
 // HW1.cpp
 // Win10, Visual C++ 2022, ISO C17
 
-// Date class representing a month, day, and year with testing .
+// Date class representing a month, day, and year with its testing.
 // Extended with monthValidation() private method to reuse validation piece 
 // of code.
 
@@ -92,7 +92,5 @@ int main() {
     // test getters
     cout << "Get Month " << d1.getMonth() << "\n";
     cout << "Get Day " << d1.getDay() << "\n";
-    cout << "Get Year " << d1.getYear() << "\n";
-
-    
+    cout << "Get Year " << d1.getYear() << "\n";   
 }
