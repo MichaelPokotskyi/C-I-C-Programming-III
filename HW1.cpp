@@ -74,6 +74,7 @@ public:
 
 int main() {
     // test obj instansiation
+    cout << "Object creating test section: creating and display Date objects:\n";
     Date d1(12, 31, 2023); // OK values
     d1.display();
 
@@ -84,12 +85,14 @@ int main() {
     Date d3(13, 31, 2023); // test Month > 12
     d3.display();
 
+    cout << "Setters test section:\n";
     // test setters
     d1.setMonth(88); // validation will work here
     d1.setDay(88);
     d1.setYear(8888);
     d1.display();
 
+    cout << "Getters test section:\n";
     // test getters
     cout << "Get Month " << d1.getMonth() << "\n";
     cout << "Get Day " << d1.getDay() << "\n";
