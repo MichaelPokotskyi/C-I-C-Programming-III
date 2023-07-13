@@ -29,7 +29,7 @@ private:
         if (Month < 1 || Month > 12) {
             this->Month = DEFAULT_MONTH;
             cerr << "1-12 expected for Month but " << Month 
-                << " found. Will be set to default value." << "\n";
+                << " found. Will be set to default value '1'." << "\n";
         }
         else {
             this->Month = Month;
@@ -84,7 +84,7 @@ int main() {
     d3.display();
 
     // test setters
-    d1.setMonth(88); // validation are OK
+    d1.setMonth(88); // validation will work here
     d1.setDay(88);
     d1.setYear(8888);
     d1.display();
@@ -93,4 +93,6 @@ int main() {
     cout << "Get Month " << d1.getMonth() << "\n";
     cout << "Get Day " << d1.getDay() << "\n";
     cout << "Get Year " << d1.getYear() << "\n";
+
+    
 }
