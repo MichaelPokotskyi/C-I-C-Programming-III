@@ -1,10 +1,9 @@
 #ifndef DATE_HW2_H
 #define DATE_HW2_H
 
-
+// defined namespace
 namespace MichaelPokotsky
 {
-
     class Date {
     private:
         // class fields
@@ -23,11 +22,6 @@ namespace MichaelPokotsky
         // three arg constructor
         Date(int Month, int Day, int Year);
 
-        //setters
-        void setMonth(int Month);
-        void setDay(int Day);
-        void setYear(int Year);
-
         // getters
         int getMonth();
         int getDay();
@@ -35,6 +29,22 @@ namespace MichaelPokotsky
 
        // display
        void display();
+
+       // explicit inline getters
+       inline int getMonth();
+       inline int getDay();
+       inline int getYear();
     };
+
+    // getters implementation
+    int Date::getMonth() {
+        return Month;
+    }
+    int Date::getDay() {
+        return Day;
+    }
+    int Date::getYear() {
+        return Year;
+    }
 }
 #endif
