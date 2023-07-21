@@ -23,7 +23,7 @@ namespace MichaelPokotsky
         Date(int Month, int Day, int Year);
 
        // display
-       void display();
+       void const display();
 
        // explicit inline getters
        inline int getMonth();

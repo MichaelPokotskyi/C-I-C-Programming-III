@@ -30,7 +30,7 @@ void
 MichaelPokotsky::Date::yearValidation(int Year) {
     this->Year = Year;
     if (Year < 0) {
-        cerr << "Year have to be > 0";
+        cerr << "Year have to be greater then 0.\n";
     }
 }
 // day in month validation
@@ -91,7 +91,6 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
     }
  }
 
-
 // default constructor initializing to current date
 MichaelPokotsky::Date::Date() {
     time_t now = time(NULL);
@@ -109,12 +108,13 @@ MichaelPokotsky::Date::Date(int Month, int Day, int Year) {
 }
 
 // display
-void 
+void const
 MichaelPokotsky::Date::display() {
     std::cout << getMonth() << "/" << getDay() 
         << "/" << getYear() << "\n";
 }
 
+// connect to proper namespace
 using namespace MichaelPokotsky;
 
 int main() {
@@ -130,13 +130,18 @@ int main() {
     Date d3(13, 31, 2023); // test Month > 12
     d3.display();
 
+    Date d5(12, 31, -1);
+    d5.display(); // test Year less than 0
 
+    // test Days > 31
+    // test Days < 0
+    
     cout << "Test taking current date constructor:\n";
     Date d4; // test taking current date constructor
     d4.display();
 
-    cout << "Getters test section with current date object:\n";
     // test getters with current date object
+    cout << "Getters test section with current date object:\n";
     cout << "Get Month " << d4.getMonth() << "\n";
     cout << "Get Day " << d4.getDay() << "\n";
     cout << "Get Year " << d4.getYear() << "\n";  
