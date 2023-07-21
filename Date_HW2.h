@@ -6,15 +6,15 @@ namespace MichaelPokotsky
 {
     class Date {
     private:
+        //month, day and year validation
+        void monthValidation(int Month);
+        void yearValidation(int Year);
+        void dayValidation(int Day, int Month);
+
         // class fields
         int Month;
         int Day;
         int Year;
-        
-        //month adn day validation
-        void monthValidation(int Month);
-        void dayValidation(int Day, int Month);
-
     public:
         // default constructor
         Date();

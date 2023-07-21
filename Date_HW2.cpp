@@ -16,25 +16,32 @@
 using std::cout;
 using std::cerr;
 
-// month 1-12 and day in month 1-31 validation
+// 1-12 month validation
 void 
 MichaelPokotsky::Date::monthValidation(int Month) {
+    this->Month = Month;
     if (Month < 1 || Month > 12) {
         cerr << "Range 1-12 expected for Month but " << Month 
             << " found.\n";
     }
-    else {
-         this->Month = Month;
+}
+// year validation
+void
+MichaelPokotsky::Date::yearValidation(int Year) {
+    this->Year = Year;
+    if (Year < 0) {
+        cerr << "Year have to be > 0";
     }
 }
+// day in month validation
 void
 MichaelPokotsky::Date::dayValidation(int Day, int Month) {
+    this->Day = Day;
+    const char* name = "";
     if (Day < 0 || Day > 31) { 
         cerr << "Range 1-31 expected for Day but " << Day 
             << " found.\n"; 
-    }
-    else {
-        const char* name;
+    } else {
         switch (Month) {
         case 1:
             name = "Janvary";
@@ -73,13 +80,17 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
             name = "December";
             break;
         default:
-            //name = "Month unidentified!";
-        }
-        if ((Month == 1 || Month == 3 || Month == 5 || Month == 7 || Month == 8 || Month == 10 || Month == 12) && Day > 31) {
-            cerr << 
+            name = "Month not identified.";
         }
     }
-}
+    if ((Month == 4 || Month == 6 || Month == 9 || Month == 11) && (Day > 30)) {
+        cerr << name << " has 30 days.";
+    }
+    if(Month == 2 && (Day == 28 || Day == 29)) {
+        cerr << name << " has 28 (29 in leap year) days.";
+    }
+ }
+
 
 // default constructor initializing to current date
 MichaelPokotsky::Date::Date() {
@@ -94,7 +105,7 @@ MichaelPokotsky::Date::Date() {
 MichaelPokotsky::Date::Date(int Month, int Day, int Year) {
     monthValidation(Month);
     dayValidation(Day, Month);
-    this->Year = Year;
+    yearValidation(Year);
 }
 
 // display
@@ -119,16 +130,14 @@ int main() {
     Date d3(13, 31, 2023); // test Month > 12
     d3.display();
 
-    //cout << "Setters test section:\n";
-    //// test setters
-    //d1.setMonth(88); // validation will work here
-    //d1.setDay(88);
-    //d1.setYear(8888);
-    //d1.display();
 
-    cout << "Getters test section:\n";
-    // test getters
-    cout << "Get Month " << d1.getMonth() << "\n";
-    cout << "Get Day " << d1.getDay() << "\n";
-    cout << "Get Year " << d1.getYear() << "\n";  
+    cout << "Test taking current date constructor:\n";
+    Date d4; // test taking current date constructor
+    d4.display();
+
+    cout << "Getters test section with current date object:\n";
+    // test getters with current date object
+    cout << "Get Month " << d4.getMonth() << "\n";
+    cout << "Get Day " << d4.getDay() << "\n";
+    cout << "Get Year " << d4.getYear() << "\n";  
 }
