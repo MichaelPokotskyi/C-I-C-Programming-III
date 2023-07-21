@@ -26,19 +26,19 @@ namespace MichaelPokotsky
        void const display();
 
        // explicit inline getters
-       inline int getMonth();
-       inline int getDay();
-       inline int getYear();
+       inline int const getMonth();
+       inline int const getDay();
+       inline int const getYear();
     };
 
     // getters implementation
-    int Date::getMonth() {
+    int const Date::getMonth() {
         return Month;
     }
-    int Date::getDay() {
+    int const Date::getDay() {
         return Day;
     }
-    int Date::getYear() {
+    int const Date::getYear() {
         return Year;
     }
 }

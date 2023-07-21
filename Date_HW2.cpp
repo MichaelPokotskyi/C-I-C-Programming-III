@@ -37,7 +37,7 @@ MichaelPokotsky::Date::yearValidation(int Year) {
 void
 MichaelPokotsky::Date::dayValidation(int Day, int Month) {
     this->Day = Day;
-    const char* name = "";
+    const char* name;
     if (Day < 0 || Day > 31) { 
         cerr << "Range 1-31 expected for Day but " << Day 
             << " found.\n"; 
@@ -93,8 +93,9 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
 
 // default constructor initializing to current date
 MichaelPokotsky::Date::Date() {
-    time_t now = time(NULL);
-    tm *ltm = localtime(&now);
+    time_t curr = time(NULL);
+    tm *ltm = localtime(&curr);
+    // direct access to struct members
     this->Month = 1900 + ltm->tm_year;
     this->Day = 1 + ltm->tm_mon;
     this->Year = ltm->tm_mday;
@@ -130,7 +131,7 @@ int main() {
     Date d3(13, 31, 2023); // test Month > 12
     d3.display();
 
-    Date d5(12, 31, -1); // test Year less than 0
+    Date d5(12, 31, -1900); // test Year less than 0
     d5.display(); 
 
     Date d6(12, 32, 2023); // test Days > 31
@@ -139,6 +140,16 @@ int main() {
     Date d7(12, -1, 2023); // test Days < 0
     d7.display();
     
+    // test April with 31 day
+    Date d8(4, 31, 2023);
+    d8.display();
+
+    // test 
+
+    // test February
+
+    // test February with 30 days
+
     
     cout << "Test taking current date constructor:\n";
     Date d4; // test taking current date constructor
