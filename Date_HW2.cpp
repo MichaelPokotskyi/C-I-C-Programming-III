@@ -13,11 +13,14 @@
 #include <ctime>
 #include "Date_HW2.h"
 
+using std::cout;
+using std::cerr;
+
 // month 1-12 and day 1-31 validation
 void 
 MichaelPokotsky::Date::monthValidation(int Month) {
     if (Month < 1 || Month > 12) {
-        std::cerr << "Range 1-12 expected for Month but " << Month 
+        cerr << "Range 1-12 expected for Month but " << Month 
             << " found.\n";
     }
     else {
@@ -27,10 +30,36 @@ MichaelPokotsky::Date::monthValidation(int Month) {
 void
 MichaelPokotsky::Date::dayValidation(int Day, int Month) {
     if (Day < 0 || Day > 31) { 
-        std::cerr << "Range 1-31 expected for Day but " << Day 
+        cerr << "Range 1-31 expected for Day but " << Day 
             << " found.\n"; 
     }
     else {
+        const char *name;
+        switch (Month) {
+        case 1:
+            name = "Janvary";
+            break;
+        case 2:
+            name = "Febrary";
+            break;
+        case 3:
+            name = "March";
+            break;
+        case 4:
+            name = "April";
+            break;
+        case 5:
+            name = "May";
+            break;
+        case 6:
+            name = "June";
+            break;
+        case 7:
+            name = "July";
+        case 8:
+            name = "August";
+
+        }
 
     }
 }
@@ -58,7 +87,31 @@ MichaelPokotsky::Date::display() {
         << "/" << getYear() << "\n";
 }
 
+using namespace MichaelPokotsky;
+
 int main() {
 
-    return 0;
+    // test objects instantiation
+    cout << "Object creating test section:\n";
+    Date d1(12, 31, 2023); // OK values
+    d1.display();
+
+    Date d2(0, 31, 2023); // test Month < 1
+    d2.display();
+
+    Date d3(13, 31, 2023); // test Month > 12
+    d3.display();
+
+    //cout << "Setters test section:\n";
+    //// test setters
+    //d1.setMonth(88); // validation will work here
+    //d1.setDay(88);
+    //d1.setYear(8888);
+    //d1.display();
+
+    cout << "Getters test section:\n";
+    // test getters
+    cout << "Get Month " << d1.getMonth() << "\n";
+    cout << "Get Day " << d1.getDay() << "\n";
+    cout << "Get Year " << d1.getYear() << "\n";  
 }

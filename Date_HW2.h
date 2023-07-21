@@ -22,11 +22,6 @@ namespace MichaelPokotsky
         // three arg constructor
         Date(int Month, int Day, int Year);
 
-        // getters
-        int getMonth();
-        int getDay();
-        int getYear();
-
        // display
        void display();
 
