@@ -16,7 +16,7 @@
 using std::cout;
 using std::cerr;
 
-// month 1-12 and day 1-31 validation
+// month 1-12 and day in month 1-31 validation
 void 
 MichaelPokotsky::Date::monthValidation(int Month) {
     if (Month < 1 || Month > 12) {
@@ -34,7 +34,7 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
             << " found.\n"; 
     }
     else {
-        const char *name;
+        const char* name;
         switch (Month) {
         case 1:
             name = "Janvary";
@@ -56,11 +56,28 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
             break;
         case 7:
             name = "July";
+            break;
         case 8:
             name = "August";
-
+            break;
+        case 9:
+            name = "September";
+            break;
+        case 10:
+            name = "October";
+            break;
+        case 11:
+            name = "November";
+            break;
+        case 12:
+            name = "December";
+            break;
+        default:
+            //name = "Month unidentified!";
         }
-
+        if ((Month == 1 || Month == 3 || Month == 5 || Month == 7 || Month == 8 || Month == 10 || Month == 12) && Day > 31) {
+            cerr << 
+        }
     }
 }
 
