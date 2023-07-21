@@ -121,7 +121,7 @@ int main() {
 
     // test objects instantiation
     cout << "Object creating test section:\n";
-    Date d1(12, 31, 2023); // OK values
+    Date d1(12, 31, 2023); // All OK values
     d1.display();
 
     Date d2(0, 31, 2023); // test Month < 1
@@ -130,11 +130,15 @@ int main() {
     Date d3(13, 31, 2023); // test Month > 12
     d3.display();
 
-    Date d5(12, 31, -1);
-    d5.display(); // test Year less than 0
+    Date d5(12, 31, -1); // test Year less than 0
+    d5.display(); 
 
-    // test Days > 31
-    // test Days < 0
+    Date d6(12, 32, 2023); // test Days > 31
+    d6.display();
+
+    Date d7(12, -1, 2023); // test Days < 0
+    d7.display();
+    
     
     cout << "Test taking current date constructor:\n";
     Date d4; // test taking current date constructor
