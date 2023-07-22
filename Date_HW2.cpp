@@ -25,7 +25,7 @@ MichaelPokotsky::Date::monthValidation(int Month) {
             << " found.\n";
     }
 }
-// year validation
+// year < 0 validation
 void
 MichaelPokotsky::Date::yearValidation(int Year) {
     this->Year = Year;
@@ -39,8 +39,8 @@ MichaelPokotsky::Date::dayValidation(int Day, int Month) {
     this->Day = Day;
     const char *name = "";
     if (Day < 0 || Day > 31) { 
-        cerr << "Range 1-31 expected for Day but " << Day 
-            << " found.\n"; 
+        cerr << "Range 1-31 expected for Day but " << Day
+            << " found.\n";
     } else {
         switch (Month) {
         case 2:
@@ -100,9 +100,8 @@ MichaelPokotsky::Date::display() {
 using namespace MichaelPokotsky;
 
 int main() {
-
     // test objects instantiation
-    cout << "Object creating test section DD/MM/YYYY:\nTest all OK values:\n";
+    cout << "Object creating test section MM/DD/YYYY:\nTest all OK values:\n";
     Date d1(12, 31, 2023); // All OK values
     d1.display();
 
