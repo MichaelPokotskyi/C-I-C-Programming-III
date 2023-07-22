@@ -1,3 +1,13 @@
+//
+// Michael Pokotskyi U09662201
+// pokotskyi.m@gmail.com
+// C I C++ Programming III CSE-40477
+// Raymond Mitchell III
+// Date_HW2.h
+// Win10, Visual C++ 2022, ISO C17
+
+// Date class definition, functions prototypes
+
 #ifndef DATE_HW2_H
 #define DATE_HW2_H
 
