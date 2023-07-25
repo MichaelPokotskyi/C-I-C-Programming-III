@@ -27,6 +27,7 @@
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
     <ClCompile Include="ProductRack.cpp" />
+    <ClCompile Include="SavingsAccount.cpp" />
     <ClCompile Include="StatusPanel.cpp" />
     <ClCompile Include="TestFramework.cpp" />
     <ClCompile Include="UnitTest.cpp" />
@@ -39,6 +40,7 @@
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductButton.h" />
     <ClInclude Include="ProductRack.h" />
+    <ClInclude Include="SavingsAccount.h" />
     <ClInclude Include="StatusPanel.h" />
     <ClInclude Include="TestFramework.h" />
     <ClInclude Include="UnitTest.h" />
