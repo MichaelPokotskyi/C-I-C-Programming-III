@@ -14,6 +14,22 @@
 // defined namespace
 namespace MichaelPokotsky 
 {
+    class SavingAccount {
+    private:
+        // class fields
+        double savingsBalance;
+        double annualInterestRate;
+    public:
+        // constructor
+        SavingAccount(double initialBalance);
 
+        // returns account 
+        double getSavingsBalance();
+
+        // sets the annual interest rate used by all accounts
+        static void setAnnualInterestRate();
+
+
+    };
 }
 #endif
