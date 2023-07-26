@@ -23,6 +23,7 @@
     <ClCompile Include="Date_HW2.cpp" />
     <ClCompile Include="DeliveryChute.cpp" />
     <ClCompile Include="Date_HW1.cpp" />
+    <ClCompile Include="HW3.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />

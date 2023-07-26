@@ -54,6 +54,9 @@
     <ClCompile Include="SavingsAccount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HW3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h">

@@ -6,30 +6,32 @@
 // SavingsAccount.h
 // Win10, Visual C++ 2022, ISO C17
 //
-//
+// SavingsAccount function prototypes and class members.
 
+// include guard
 #ifndef SAVINGSACCOUNT_H
 #define SAVINGSACCOUNT_H
 
 // defined namespace
-namespace MichaelPokotsky 
+namespace MichaelPokotsky
 {
-    class SavingAccount {
-    private:
-        // class fields
-        double savingsBalance;
-        double annualInterestRate;
+    class SavingsAccount {
     public:
         // constructor
-        SavingAccount(double initialBalance);
+        SavingsAccount(double initialBalance);
 
-        // returns account 
+        // returns account balance
         double getSavingsBalance();
 
         // sets the annual interest rate used by all accounts
-        static void setAnnualInterestRate();
+        static void setAnnualInterestRate(double interestRate);
 
-
+        // calculates the monthly interest earned for the account
+        void applyMonthlyInterest();
+    private:
+        // class fields
+        double savingsBalance;
+        static double annualInterestRate;
     };
 }
 #endif
