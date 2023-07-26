@@ -33,7 +33,7 @@ int main() {
     cout << "Applying negative annual interest to Savings Account " << p1.getSavingsBalance() << "$\n";
     p1.applyMonthlyInterest();
     cout << "Account value after applying: " << p1.getSavingsBalance() << "$\n";
-    cout << "Applying negative annual interest to Savings Account " << p3.getSavingsBalance() << "$\n";
+    cout << "Applying zero annual interest to Savings Account " << p3.getSavingsBalance() << "$\n";
     p3.applyMonthlyInterest();
     cout << "Account value after applying: " << p3.getSavingsBalance() << "$\n";
     cout << endl;

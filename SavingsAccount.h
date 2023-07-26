@@ -24,7 +24,7 @@ namespace MichaelPokotsky
         double const getSavingsBalance();
 
         // sets the annual interest rate used by all accounts
-        static void setAnnualInterestRate(double interestRate);
+        static void const setAnnualInterestRate(double interestRate);
 
         // calculates the monthly interest earned for the account
         void applyMonthlyInterest();

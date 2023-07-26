@@ -23,7 +23,8 @@ const int MONTH = 12;
 double MichaelPokotsky::SavingsAccount::annualInterestRate;
 
 // constructor takes initial balance value greater then zero
-MichaelPokotsky::SavingsAccount::SavingsAccount(double initialBalance) : savingsBalance(initialBalance) {
+MichaelPokotsky::SavingsAccount::SavingsAccount(double initialBalance) : 
+    savingsBalance(initialBalance) {
     if (initialBalance < 0) {
         cerr << "Initial balance cannot be negative, but " << initialBalance << 
             "$ found, will be set to zero\n";
@@ -38,7 +39,7 @@ MichaelPokotsky::SavingsAccount::getSavingsBalance() {
 }
 
 // sets the annual interest rate used by all accounts
-void
+void const
 MichaelPokotsky::SavingsAccount::setAnnualInterestRate(double interestRate) {
     // notify when annual interes been changed
     if (annualInterestRate != interestRate) {
