@@ -32,7 +32,7 @@ MichaelPokotsky::SavingsAccount::SavingsAccount(double initialBalance) : savings
 }
 
 // returns account balance
-double
+double const
 MichaelPokotsky::SavingsAccount::getSavingsBalance() {
     return savingsBalance;
 }
