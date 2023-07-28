@@ -8,6 +8,9 @@
 //
 // Complex function prototypes and class members.
 
+// #include <iostream>
+// #include <cstdlib>
+
 // include guard
 #ifndef COMPLEX_H
 #define COMPLEX_H
@@ -20,12 +23,17 @@ namespace MichaelPokotskyi
         Complex();
         Complex(double real, double imaginary);
 
+        Complex operator+(const Complex &number) const;
+        Complex operator-(const Complex& number) const;
+
     private:
+
+        void complexInit(double real, double imaginary);
+
         double real;
         double imaginary;
-
-        Complex complexInit(double real, double imaginary);
-
+        bool realIsNeg;
+        bool imaginaryIsNeg;
     };
 }
 #endif

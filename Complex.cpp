@@ -12,7 +12,7 @@
 #include "Complex.h"
 
 using std::cout;
-using std::cerr;
+// using std::cerr;
 
 MichaelPokotskyi::Complex::Complex() {
     complexInit(0, 0);
@@ -20,6 +20,11 @@ MichaelPokotskyi::Complex::Complex() {
 
 MichaelPokotskyi::Complex::Complex(double real, double imaginary) {
     complexInit(real, imaginary);
+}
+
+MichaelPokotskyi::Complex 
+MichaelPokotskyi::Complex::operator+(Complex &number) {
+    // return Complex(1, 1);
 }
 
 void MichaelPokotskyi::Complex::complexInit(double real, double imaginary)
