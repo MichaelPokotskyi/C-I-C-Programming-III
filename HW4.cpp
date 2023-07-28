@@ -8,6 +8,12 @@
 //
 // Tests for Complex class implementation.
 
+// TODO LIST
+// commects
+// TESTS incl comparison == !=
+// switch/case to output
+// check func CONSTness
+
 #include <iostream>
 #include "Complex.h"
 

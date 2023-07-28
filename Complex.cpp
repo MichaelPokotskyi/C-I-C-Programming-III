@@ -47,8 +47,6 @@ istream& MichaelPokotskyi::operator>>(istream& in, Complex& number) {
     double real, imaginary;
     char i;
     in >> real >> imaginary >> i;
-    // in >> imaginary;
-    // in >> i;
     number.initialComplex(real, imaginary);
     return in;
 }
@@ -58,14 +56,6 @@ ostream& MichaelPokotskyi::operator<<(ostream& out, const Complex& number) {
     if (number.imaginary > 0) { out << "+"; }
     out << number.imaginary << "i\n";
     return out;
-}
-
-void
-MichaelPokotskyi::Complex::display() {
-    //if (real > 0) { cout << "+"; }
-    cout << real;
-    if (imaginary > 0) { cout << "+"; }
-    cout << imaginary << "i\n";
 }
 
 void MichaelPokotskyi::Complex::initialComplex(double real, double imaginary)

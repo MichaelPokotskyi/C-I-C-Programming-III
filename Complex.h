@@ -33,9 +33,9 @@ namespace MichaelPokotskyi
         // friend overloading functions prototypes
         friend istream& operator>>(istream& in, Complex& value);
         friend ostream& operator<<(ostream& out, const Complex& value);
-        
-        void display();
+
     private:
+        // 
         void initialComplex(double real, double imaginary);
         double real;
         double imaginary;
