@@ -11,17 +11,26 @@
 #include <iostream>
 #include "Complex.h"
 
+using std::cin;
 using std::cout;
+using std::endl;
 using namespace MichaelPokotskyi;
 
 int main() {
     Complex p1(0, 0);
-    p1.display();
+    // p1.display();
+    cout << p1 << endl;
     Complex p2(2, 4);
-    p2.display();
+    //p2.display();
+    cout << p2 << endl;
     Complex p3(-2, -4);
-    p3.display();
-
+    //p3.display();
+    cout << p3 << endl;
     p1 = p2 - p3;
-    p1.display();
+    //p1.display();
+    cout << p1 << endl;
+
+    Complex tt;
+    cin >> tt;
+    cout << tt;
 }

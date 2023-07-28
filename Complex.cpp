@@ -12,7 +12,6 @@
 #include "Complex.h"
 
 using std::cout;
-// using std::cerr;
 
 MichaelPokotskyi::Complex::Complex():
     real(0), imaginary(0) {
@@ -44,12 +43,21 @@ MichaelPokotskyi::Complex::operator==(const Complex& number){
     else {return false;}
 }
 
-ostream& MichaelPokotskyi::operator<<(ostream& out, const Complex& value) {
- 
+istream& MichaelPokotskyi::operator>>(istream& in, Complex& number) {
+    double real, imaginary;
+    char i;
+    in >> real >> imaginary >> i;
+    // in >> imaginary;
+    // in >> i;
+    number.initialComplex(real, imaginary);
+    return in;
 }
 
-istream& MichaelPokotskyi::operator>>(istream& in, Complex& value) {
-
+ostream& MichaelPokotskyi::operator<<(ostream& out, const Complex& number) {
+    out << number.real;
+    if (number.imaginary > 0) { out << "+"; }
+    out << number.imaginary << "i\n";
+    return out;
 }
 
 void
@@ -58,6 +66,12 @@ MichaelPokotskyi::Complex::display() {
     cout << real;
     if (imaginary > 0) { cout << "+"; }
     cout << imaginary << "i\n";
+}
+
+void MichaelPokotskyi::Complex::initialComplex(double real, double imaginary)
+{
+    this->real = real;
+    this->imaginary = imaginary;
 }
 
 

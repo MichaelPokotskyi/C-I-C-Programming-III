@@ -22,6 +22,7 @@ namespace MichaelPokotskyi
     public:
         Complex();
         Complex(double real, double imaginary);
+         
 
         // member overloading functions prototypes
         Complex operator+(const Complex &number) const;
@@ -30,12 +31,12 @@ namespace MichaelPokotskyi
         bool operator==(const Complex& number);
 
         // friend overloading functions prototypes
-        friend ostream& operator<<(ostream& out, const Complex& value);
         friend istream& operator>>(istream& in, Complex& value);
-
-
+        friend ostream& operator<<(ostream& out, const Complex& value);
+        
         void display();
     private:
+        void initialComplex(double real, double imaginary);
         double real;
         double imaginary;
     };
