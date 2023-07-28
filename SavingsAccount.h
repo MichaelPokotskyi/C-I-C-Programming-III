@@ -21,10 +21,10 @@ namespace MichaelPokotsky
         SavingsAccount(double initialBalance);
 
         // returns account balance
-        double const getSavingsBalance();
+        double getSavingsBalance() const;
 
         // sets the annual interest rate used by all accounts
-        static void const setAnnualInterestRate(double interestRate);
+        static void setAnnualInterestRate(double interestRate);
 
         // calculates the monthly interest earned for the account
         void applyMonthlyInterest();

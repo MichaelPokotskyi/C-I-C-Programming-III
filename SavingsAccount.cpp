@@ -33,13 +33,13 @@ MichaelPokotsky::SavingsAccount::SavingsAccount(double initialBalance) :
 }
 
 // returns account balance
-double const
-MichaelPokotsky::SavingsAccount::getSavingsBalance() {
+double
+MichaelPokotsky::SavingsAccount::getSavingsBalance() const {
     return savingsBalance;
 }
 
 // sets the annual interest rate used by all accounts
-void const
+void
 MichaelPokotsky::SavingsAccount::setAnnualInterestRate(double interestRate) {
     // notify when annual interes been changed
     if (annualInterestRate != interestRate) {
@@ -48,7 +48,7 @@ MichaelPokotsky::SavingsAccount::setAnnualInterestRate(double interestRate) {
     }
     // no negative rate allowed
     if (interestRate < 0) {
-        cerr << "Percentege cannot be negative, but " << interestRate << 
+        cerr << "Percentage cannot be negative, but " << interestRate << 
             "% found, will be set to zero.\n";
         annualInterestRate = 0;
     } else {

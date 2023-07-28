@@ -20,10 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="Date_HW2.cpp" />
     <ClCompile Include="DeliveryChute.cpp" />
     <ClCompile Include="Date_HW1.cpp" />
     <ClCompile Include="HW3.cpp" />
+    <ClCompile Include="HW4.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
@@ -36,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Complex.h" />
     <ClInclude Include="Date_HW2.h" />
     <ClInclude Include="DeliveryChute.h" />
     <ClInclude Include="Product.h" />

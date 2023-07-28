@@ -10,7 +10,7 @@
 
 
 #include <iostream>
-#include "SavingsAccount.h"
+#include "SavingsAccount.h"5
 
 using std::cout;
 using std::endl;
@@ -41,10 +41,10 @@ int main() {
     "**********************************************************************************************\n";
     cout << "Set up interest annual interest rate to 10%\n";
     SavingsAccount::setAnnualInterestRate(10.);
-    cout << "Applying negative annual interest to Savings Account " << p1.getSavingsBalance() << "$\n";
+    cout << "Applying positive annual interest to Savings Account " << p1.getSavingsBalance() << "$\n";
     p1.applyMonthlyInterest();
     cout << "Account value after applying: " << p1.getSavingsBalance() << "$\n";
-    cout << "Applying negative annual interest to Savings Account " << p1.getSavingsBalance() << "$\n";
+    cout << "Applying positive annual interest to Savings Account " << p1.getSavingsBalance() << "$\n";
     p3.applyMonthlyInterest();
     cout << "Account value after applying: " << p3.getSavingsBalance() << "$\n";
     cout << endl;
@@ -64,7 +64,7 @@ int main() {
         "**********************************************************************************************\n";
     // 20% rate are still valid for all objects
     cout << "Applying correct (positive) interest rate to negative Savings Balance created object\n";
-    cout << "Applying negative annual interest to Savings Account " << p2.getSavingsBalance() << "$\n";
+    cout << "Applying positive annual interest to Savings Account " << p2.getSavingsBalance() << "$\n";
     p2.applyMonthlyInterest();
     cout << "Account value after applying: " << p2.getSavingsBalance() << "$\n";
 }
