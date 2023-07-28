@@ -8,12 +8,12 @@
 //
 // Complex function prototypes and class members.
 
-// #include <iostream>
-// #include <cstdlib>
-
 // include guard
 #ifndef COMPLEX_H
 #define COMPLEX_H
+
+using std::ostream;
+using std::istream;
 
 // defined namespace
 namespace MichaelPokotskyi
@@ -23,17 +23,21 @@ namespace MichaelPokotskyi
         Complex();
         Complex(double real, double imaginary);
 
+        // member overloading functions prototypes
         Complex operator+(const Complex &number) const;
-        Complex operator-(const Complex& number) const;
+        Complex operator-(const Complex &number) const;
+        bool operator!=(const Complex& number);
+        bool operator==(const Complex& number);
 
+        // friend overloading functions prototypes
+        friend ostream& operator<<(ostream& out, const Complex& value);
+        friend istream& operator>>(istream& in, Complex& value);
+
+
+        void display();
     private:
-
-        void complexInit(double real, double imaginary);
-
         double real;
         double imaginary;
-        bool realIsNeg;
-        bool imaginaryIsNeg;
     };
 }
 #endif

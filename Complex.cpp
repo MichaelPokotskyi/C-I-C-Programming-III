@@ -14,23 +14,50 @@
 using std::cout;
 // using std::cerr;
 
-MichaelPokotskyi::Complex::Complex() {
-    complexInit(0, 0);
+MichaelPokotskyi::Complex::Complex():
+    real(0), imaginary(0) {
 }
 
-MichaelPokotskyi::Complex::Complex(double real, double imaginary) {
-    complexInit(real, imaginary);
+MichaelPokotskyi::Complex::Complex(double real, double imaginary):
+    real(real), imaginary(imaginary) {
 }
 
-MichaelPokotskyi::Complex 
-MichaelPokotskyi::Complex::operator+(Complex &number) {
-    // return Complex(1, 1);
+MichaelPokotskyi::Complex
+MichaelPokotskyi::Complex::operator+(const Complex &number) const {
+    return Complex(real + number.real, imaginary + number.imaginary);
 }
 
-void MichaelPokotskyi::Complex::complexInit(double real, double imaginary)
-    {
-    this->real = real;
-    this->imaginary = imaginary;
-    realIsNeg = real < 0;
-    imaginaryIsNeg = imaginary < 0;
-    }
+MichaelPokotskyi::Complex
+MichaelPokotskyi::Complex::operator-(const Complex& number) const {
+    return Complex(real - number.real, imaginary - number.imaginary);
+}
+
+bool
+MichaelPokotskyi::Complex::operator!=(const Complex& number){
+    if (real != number.real || imaginary != number.imaginary) {return true;}
+    else {return false;}
+}
+
+bool
+MichaelPokotskyi::Complex::operator==(const Complex& number){
+    if (real == number.real && imaginary == number.imaginary) {return true;}
+    else {return false;}
+}
+
+ostream& MichaelPokotskyi::operator<<(ostream& out, const Complex& value) {
+ 
+}
+
+istream& MichaelPokotskyi::operator>>(istream& in, Complex& value) {
+
+}
+
+void
+MichaelPokotskyi::Complex::display() {
+    //if (real > 0) { cout << "+"; }
+    cout << real;
+    if (imaginary > 0) { cout << "+"; }
+    cout << imaginary << "i\n";
+}
+
+
