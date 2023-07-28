@@ -13,14 +13,17 @@
 
 using std::cout;
 
+// no arg constructor assigning zer0
 MichaelPokotskyi::Complex::Complex():
     real(0), imaginary(0) {
 }
 
+// two args constructor takes double values
 MichaelPokotskyi::Complex::Complex(double real, double imaginary):
     real(real), imaginary(imaginary) {
 }
 
+// 
 MichaelPokotskyi::Complex
 MichaelPokotskyi::Complex::operator+(const Complex &number) const {
     return Complex(real + number.real, imaginary + number.imaginary);

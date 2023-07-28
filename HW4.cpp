@@ -9,7 +9,7 @@
 // Tests for Complex class implementation.
 
 // TODO LIST
-// commects
+// comments
 // TESTS incl comparison == !=
 // switch/case to output
 // check func CONSTness

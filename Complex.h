@@ -20,23 +20,24 @@ namespace MichaelPokotskyi
 {
     class Complex {
     public:
+        // constructor prototypes
         Complex();
         Complex(double real, double imaginary);
          
+        // member operators overloading functions prototypes
+        Complex operator+(const Complex &number) const; // +
+        Complex operator-(const Complex &number) const; // -
+        bool operator!=(const Complex& number); // !=
+        bool operator==(const Complex& number); // ==
 
-        // member overloading functions prototypes
-        Complex operator+(const Complex &number) const;
-        Complex operator-(const Complex &number) const;
-        bool operator!=(const Complex& number);
-        bool operator==(const Complex& number);
-
-        // friend overloading functions prototypes
+        // in&out streams friend overloading functions prototypes
         friend istream& operator>>(istream& in, Complex& value);
         friend ostream& operator<<(ostream& out, const Complex& value);
 
     private:
-        // 
+        // initialization for overloading insertion stream
         void initialComplex(double real, double imaginary);
+        // class fields
         double real;
         double imaginary;
     };
