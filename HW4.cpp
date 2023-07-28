@@ -36,7 +36,11 @@ int main() {
     //p1.display();
     cout << p1 << endl;
 
-    Complex tt;
-    cin >> tt;
-    cout << tt;
+    // Complex tt;
+    cin >> p1;
+    cout << p1;
+
+    cout << p2.operator!=(p1);
+    cout << p1.operator==(p2);
+    
 }
