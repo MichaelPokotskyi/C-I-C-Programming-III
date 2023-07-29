@@ -27,12 +27,12 @@ namespace MichaelPokotskyi
         // member operators overloading functions prototypes
         Complex operator+(const Complex &number) const; // +
         Complex operator-(const Complex &number) const; // -
-        bool operator!=(const Complex& number); // !=
-        bool operator==(const Complex& number); // ==
+        bool operator!=(const Complex &number); // !=
+        bool operator==(const Complex &number); // ==
 
         // in&out streams friend overloading functions prototypes
-        friend istream& operator>>(istream& in, Complex& value);
-        friend ostream& operator<<(ostream& out, const Complex& value);
+        friend istream &operator>>(istream &in, Complex &value);
+        friend ostream &operator<<(ostream &out, const Complex &value);
 
     private:
         // initialization for overloading insertion stream
@@ -43,4 +43,3 @@ namespace MichaelPokotskyi
     };
 }
 #endif
-

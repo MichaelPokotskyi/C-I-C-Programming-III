@@ -6,12 +6,11 @@
 // Complex.cpp
 // Win10, Visual C++ 2022, ISO C17
 // 
-// Complex functions implementation. 
+// Complex functions implementation.
+// Zer0 implemented as 0+0i
 
 #include <iostream>
 #include "Complex.h"
-
-using std::cout;
 
 // no arg constructor assigning zer0
 MichaelPokotskyi::Complex::Complex():
@@ -31,26 +30,26 @@ MichaelPokotskyi::Complex::operator+(const Complex &number) const {
 
 // overloading - operator
 MichaelPokotskyi::Complex
-MichaelPokotskyi::Complex::operator-(const Complex& number) const {
+MichaelPokotskyi::Complex::operator-(const Complex &number) const {
     return Complex(real - number.real, imaginary - number.imaginary);
 }
 
 // overloading != operator
 bool
-MichaelPokotskyi::Complex::operator!=(const Complex& number){
+MichaelPokotskyi::Complex::operator !=(const Complex &number) {
     if (real != number.real || imaginary != number.imaginary) {return true;}
     else {return false;}
 }
 
 // overloading == operator
 bool
-MichaelPokotskyi::Complex::operator==(const Complex& number){
+MichaelPokotskyi::Complex::operator ==(const Complex &number){
     if (real == number.real && imaginary == number.imaginary) {return true;}
     else {return false;}
 }
 
 // overloading >> operator
-istream& MichaelPokotskyi::operator>>(istream& in, Complex& number) {
+istream& MichaelPokotskyi::operator>>(istream &in, Complex &number) {
     double real, imaginary;
     char i;
     in >> real >> imaginary >> i;
@@ -59,16 +58,15 @@ istream& MichaelPokotskyi::operator>>(istream& in, Complex& number) {
 }
 
 // overloading << operator
-ostream& MichaelPokotskyi::operator<<(ostream& out, const Complex& number) {
+ostream& MichaelPokotskyi::operator<<(ostream &out, const Complex &number) {
     out << number.real;
-    if (number.imaginary > 0) { out << "+"; }
+    if (number.imaginary >= 0) { out << "+"; }
     out << number.imaginary << "i\n";
     return out;
 }
 
-// initializing Complex object for insertion operator overloading
-void MichaelPokotskyi::Complex::initialComplex(double real, double imaginary)
-{
+// initializing Complex object for >> operator overloading
+void MichaelPokotskyi::Complex::initialComplex(double real, double imaginary) {
     this->real = real;
     this->imaginary = imaginary;
 }
