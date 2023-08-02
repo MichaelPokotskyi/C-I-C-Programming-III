@@ -26,11 +26,13 @@
     <ClCompile Include="Date_HW1.cpp" />
     <ClCompile Include="HW3.cpp" />
     <ClCompile Include="HW4.cpp" />
+    <ClCompile Include="HW5.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
     <ClCompile Include="ProductRack.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
+    <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="StatusPanel.cpp" />
     <ClCompile Include="TestFramework.cpp" />
     <ClCompile Include="UnitTest.cpp" />
@@ -45,6 +47,7 @@
     <ClInclude Include="ProductButton.h" />
     <ClInclude Include="ProductRack.h" />
     <ClInclude Include="SavingsAccount.h" />
+    <ClInclude Include="Shapes.h" />
     <ClInclude Include="StatusPanel.h" />
     <ClInclude Include="TestFramework.h" />
     <ClInclude Include="UnitTest.h" />
