@@ -16,18 +16,16 @@
 MichaelPokotskyi::Circle::Circle(double radius) :
 radius(radius){
 }
-
 // square constructor implementation
 MichaelPokotskyi::Square::Square(double lengthOfSide) :
     lengthOfSide(lengthOfSide) {
 }
-
 // sphere constructor implementation
 MichaelPokotskyi::Sphere::Sphere(double radius) :
     radius(radius){
 }
-
 // cube constructor implementation
 MichaelPokotskyi::Cube::Cube(double lengthOfSide) :
     lengthOfSide(lengthOfSide){
 }
+
