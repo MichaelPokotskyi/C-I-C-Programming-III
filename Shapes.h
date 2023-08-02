@@ -16,7 +16,7 @@
 namespace MichaelPokotskyi {
     class Shape {
     public:
-        virtual void display() const = 0;
+        virtual void display() = 0;
     };
 
     class TwoDimentionalShape : public Shape {
@@ -33,7 +33,7 @@ namespace MichaelPokotskyi {
     class Circle : public TwoDimentionalShape {
     public:
         Circle(double radius);
-        virtual void display() const;
+        virtual void display();
         virtual double getArea();
     private:
         double radius;
@@ -52,8 +52,8 @@ namespace MichaelPokotskyi {
     public:
         Sphere(double radius);
         virtual void display() const;
-        virtual double getSurfaceArea();
-        virtual double getVolume();
+        //virtual double getSurfaceArea();
+        //virtual double getVolume();
 
     private:
         double radius;
@@ -63,8 +63,8 @@ namespace MichaelPokotskyi {
     public:
         Cube(double lengthOfSide);
         void virtual display() const;
-        virtual double getSurfaceArea();
-        virtual double getVolume();
+        //virtual double getSurfaceArea();
+        //virtual double getVolume();
     private:
         double lengthOfSide;
     };

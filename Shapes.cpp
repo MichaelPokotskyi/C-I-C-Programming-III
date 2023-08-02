@@ -9,9 +9,9 @@
 // Shapes functions implementation.
 
 #include <iostream>
-#include <cmath>
 #include "Shapes.h"
 
+using std::cout;
 const double PI = 3.1415926535897932385;
 
 // object constructor section:
@@ -35,7 +35,8 @@ MichaelPokotskyi::Cube::Cube(double lengthOfSide):
 // display function overriding implementation section
 // circle class
 void
-MichaelPokotskyi::Circle::display() const {
+MichaelPokotskyi::Circle::display() {
+    cout << "Circle with radus " << MichaelPokotskyi::Circle::radius << " has area " << getArea();
 }
 // square class
 void

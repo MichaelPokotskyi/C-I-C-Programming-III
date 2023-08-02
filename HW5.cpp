@@ -18,5 +18,6 @@ using std::endl;
 using namespace MichaelPokotskyi;
 
 int main() {
-   
+    Circle p1(2);
+    p1.display();
 }
