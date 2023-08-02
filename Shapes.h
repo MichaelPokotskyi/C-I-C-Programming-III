@@ -27,7 +27,7 @@ namespace MichaelPokotskyi {
     class ThreeDimantionalShape : public Shape {
     public:
         virtual double getSurfaceArea() const = 0;
-        virtual double getVolume() = const 0;
+        virtual double getVolume() const = 0;
     };
 
     class Circle : public TwoDimentionalShape {

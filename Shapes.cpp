@@ -9,7 +9,10 @@
 // Shapes functions implementation.
 
 #include <iostream>
+#include <cmath>
 #include "Shapes.h"
+
+const double PI = 3.1415926535897932385;
 
 // object constructor section:
 // circle constructor inplementation
@@ -46,3 +49,17 @@ MichaelPokotskyi::Sphere::display() const {
 void
 MichaelPokotskyi::Cube::display() const {
 }
+
+// specific classes functions section
+// circle class
+double
+MichaelPokotskyi::Circle::getArea() {
+    return (MichaelPokotskyi::Circle::radius * MichaelPokotskyi::Circle::radius) * PI;
+}
+// square class
+double
+MichaelPokotskyi::Square::getArea() {
+    return MichaelPokotskyi::Square::lengthOfSide * MichaelPokotskyi::Square::lengthOfSide;
+}
+// sphere class
+// cube class
