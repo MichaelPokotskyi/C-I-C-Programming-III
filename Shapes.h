@@ -42,7 +42,7 @@ namespace MichaelPokotskyi {
     class Square : public TwoDimentionalShape {
     public:
         Square(double lenghtOfSide);
-        virtual void display() const;
+        virtual void display();
         virtual double getArea();
     private:
         double lengthOfSide;

@@ -36,19 +36,22 @@ MichaelPokotskyi::Cube::Cube(double lengthOfSide):
 // circle class
 void
 MichaelPokotskyi::Circle::display() {
-    cout << "Circle with radus " << MichaelPokotskyi::Circle::radius << " has area " << getArea();
+    cout << "Circle with radus " << MichaelPokotskyi::Circle::radius << 
+        " has area " << getArea() << "\n";
 }
 // square class
 void
-MichaelPokotskyi::Square::display() const {
+MichaelPokotskyi::Square::display() {
+    cout << "Square with length of side " << MichaelPokotskyi::Square::lengthOfSide << 
+        " has area " << getArea() << "\n";
 }
 // sphere class
 void
-MichaelPokotskyi::Sphere::display() const {
+MichaelPokotskyi::Sphere::display() {
 }
 // cube class
 void
-MichaelPokotskyi::Cube::display() const {
+MichaelPokotskyi::Cube::display(){
 }
 
 // specific classes functions section
@@ -63,4 +66,16 @@ MichaelPokotskyi::Square::getArea() {
     return MichaelPokotskyi::Square::lengthOfSide * MichaelPokotskyi::Square::lengthOfSide;
 }
 // sphere class
+double 
+MichaelPokotskyi::Sphere::getSurfaceArea() {
+}
+double 
+MichaelPokotskyi::Sphere::getVolume() {
+}
 // cube class
+double
+MichaelPokotskyi::Cube::getSurfaceArea() {
+}
+double 
+MichaelPokotskyi::Cube::getVolume() {
+}

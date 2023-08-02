@@ -20,4 +20,7 @@ using namespace MichaelPokotskyi;
 int main() {
     Circle p1(2);
     p1.display();
+
+    Square s1(3);
+    s1.display();
 }
