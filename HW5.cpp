@@ -23,4 +23,10 @@ int main() {
 
     Square s1(3);
     s1.display();
+
+    Sphere sp1(4);
+    //sp1.display();
+
+    Cube c1(5);
+    //c1.display();
 }

@@ -54,7 +54,6 @@ namespace MichaelPokotskyi {
         virtual void display();
         virtual double getSurfaceArea();
         virtual double getVolume();
-
     private:
         double radius;
     };
@@ -62,7 +61,7 @@ namespace MichaelPokotskyi {
     class Cube : public ThreeDimantionalShape {
     public:
         Cube(double lengthOfSide);
-        void virtual display();
+        virtual void display();
         virtual double getSurfaceArea();
         virtual double getVolume();
     private:

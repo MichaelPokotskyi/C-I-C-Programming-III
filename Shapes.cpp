@@ -9,6 +9,7 @@
 // Shapes functions implementation.
 
 #include <iostream>
+#include <cmath>
 #include "Shapes.h"
 
 using std::cout;
@@ -48,6 +49,8 @@ MichaelPokotskyi::Square::display() {
 // sphere class
 void
 MichaelPokotskyi::Sphere::display() {
+    cout << "Sphere with radius " << MichaelPokotskyi::Sphere::radius <<
+        " has surface area " << getSurfaceArea() << "\n";
 }
 // cube class
 void
@@ -56,26 +59,39 @@ MichaelPokotskyi::Cube::display(){
 
 // specific classes functions section
 // circle class
+// A = ?r²
 double
 MichaelPokotskyi::Circle::getArea() {
-    return (MichaelPokotskyi::Circle::radius * MichaelPokotskyi::Circle::radius) * PI;
+    return pow (MichaelPokotskyi::Circle::radius, 2) * PI;
 }
+
 // square class
+// A = a²
 double
 MichaelPokotskyi::Square::getArea() {
     return MichaelPokotskyi::Square::lengthOfSide * MichaelPokotskyi::Square::lengthOfSide;
 }
+
 // sphere class
+// SA = 4?r²
 double 
 MichaelPokotskyi::Sphere::getSurfaceArea() {
+    return 4 * PI * pow(MichaelPokotskyi::Sphere::radius, 2);
 }
 double 
+// V = 4/3?r³
 MichaelPokotskyi::Sphere::getVolume() {
+    return (4 / 3) * PI * pow(MichaelPokotskyi::Sphere::radius, 3);
 }
+
 // cube class
+// SA = 6a²
 double
 MichaelPokotskyi::Cube::getSurfaceArea() {
+    return 6 * pow(MichaelPokotskyi::Cube::lengthOfSide, 2);
 }
+// V = s³
 double 
 MichaelPokotskyi::Cube::getVolume() {
+    return pow(MichaelPokotskyi::Cube::lengthOfSide, 3);
 }
