@@ -11,22 +11,19 @@
 #include <iostream>
 #include "Shapes.h"
 
-using std::cin;
-using std::cout;
-using std::endl;
-//using std::boolalpha;
 using namespace MichaelPokotskyi;
 
 int main() {
-    Circle p1(2);
-    p1.display();
-
-    Square s1(3);
-    s1.display();
-
-    Sphere sp1(4);
-    //sp1.display();
-
-    Cube c1(5);
-    //c1.display();
+    // Four shape pointers from concrete classes in heap
+    Circle *pC = new Circle(2);
+    Square *pS = new Square(3);
+    Sphere *spP = new Sphere(4);
+    Cube *pCu = new Cube(5);
+    // Array of Shapes fulfilled pointers
+    Shape *ar[4] = {pC, pS, spP, pCu};
+    // Iterating array
+    for (int i = 0; i < 4; ++i) {
+        ar[i]->display();
+        delete ar[i];
+    }
 }

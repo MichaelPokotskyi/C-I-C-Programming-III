@@ -1,4 +1,4 @@
-//
+ï»¿//
 // Michael Pokotskyi U09662201
 // pokotskyi.m@gmail.com
 // C I C++ Programming III CSE-40477
@@ -36,62 +36,64 @@ MichaelPokotskyi::Cube::Cube(double lengthOfSide):
 // display function overriding implementation section
 // circle class
 void
-MichaelPokotskyi::Circle::display() {
+MichaelPokotskyi::Circle::display() const {
     cout << "Circle with radus " << MichaelPokotskyi::Circle::radius << 
         " has area " << getArea() << "\n";
 }
 // square class
 void
-MichaelPokotskyi::Square::display() {
+MichaelPokotskyi::Square::display() const {
     cout << "Square with length of side " << MichaelPokotskyi::Square::lengthOfSide << 
         " has area " << getArea() << "\n";
 }
 // sphere class
 void
-MichaelPokotskyi::Sphere::display() {
+MichaelPokotskyi::Sphere::display() const {
     cout << "Sphere with radius " << MichaelPokotskyi::Sphere::radius <<
-        " has surface area " << getSurfaceArea() << "\n";
+        " has surface area " << getSurfaceArea() << " and volume " << getVolume() << "\n";
 }
 // cube class
 void
-MichaelPokotskyi::Cube::display(){
+MichaelPokotskyi::Cube::display() const {
+    cout << "Cube with lenght side " << MichaelPokotskyi::Cube::lengthOfSide <<
+        " has surface area " << getSurfaceArea() << " and volume " << getVolume() << "\n";
 }
 
 // specific classes functions section
 // circle class
-// A = ?r²
+// A = Ï€^2
 double
-MichaelPokotskyi::Circle::getArea() {
+MichaelPokotskyi::Circle::getArea() const {
     return pow (MichaelPokotskyi::Circle::radius, 2) * PI;
 }
 
 // square class
-// A = a²
+// A = a^2
 double
-MichaelPokotskyi::Square::getArea() {
-    return MichaelPokotskyi::Square::lengthOfSide * MichaelPokotskyi::Square::lengthOfSide;
+MichaelPokotskyi::Square::getArea() const {
+    return pow(MichaelPokotskyi::Square::lengthOfSide, 2);
 }
 
 // sphere class
-// SA = 4?r²
+// SA = 4Ï€r^3
 double 
-MichaelPokotskyi::Sphere::getSurfaceArea() {
-    return 4 * PI * pow(MichaelPokotskyi::Sphere::radius, 2);
+MichaelPokotskyi::Sphere::getSurfaceArea() const {
+    return 4. * PI * pow(MichaelPokotskyi::Sphere::radius, 2);
 }
 double 
-// V = 4/3?r³
-MichaelPokotskyi::Sphere::getVolume() {
-    return (4 / 3) * PI * pow(MichaelPokotskyi::Sphere::radius, 3);
+// V = 4/3Ï€r^3
+MichaelPokotskyi::Sphere::getVolume() const {
+    return (4. / 3.) * PI * pow(MichaelPokotskyi::Sphere::radius, 3);
 }
 
 // cube class
-// SA = 6a²
+// SA = 6a^2
 double
-MichaelPokotskyi::Cube::getSurfaceArea() {
-    return 6 * pow(MichaelPokotskyi::Cube::lengthOfSide, 2);
+MichaelPokotskyi::Cube::getSurfaceArea() const {
+    return 6. * pow(MichaelPokotskyi::Cube::lengthOfSide, 2);
 }
-// V = s³
+// V = s^3
 double 
-MichaelPokotskyi::Cube::getVolume() {
+MichaelPokotskyi::Cube::getVolume() const {
     return pow(MichaelPokotskyi::Cube::lengthOfSide, 3);
 }

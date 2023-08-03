@@ -14,56 +14,57 @@
 
 // defined namespace
 namespace MichaelPokotskyi {
+    // Main parent class
     class Shape {
     public:
-        virtual void display() = 0;
+        virtual void display() const = 0;
     };
-
+    // Derived class for 2D
     class TwoDimentionalShape : public Shape {
     public:
-        virtual double getArea() = 0;
+        virtual double getArea() const = 0;
     };
-
-    class ThreeDimantionalShape : public Shape {
+    // Derived class for 3D
+    class ThreeDimentionalShape : public Shape {
     public:
         virtual double getSurfaceArea() const = 0;
         virtual double getVolume() const = 0;
     };
-
+    // concrete 2D circle shape class
     class Circle : public TwoDimentionalShape {
     public:
         Circle(double radius);
-        virtual void display();
-        virtual double getArea();
+        virtual void display() const;
+        virtual double getArea() const;
     private:
         double radius;
     };
-
+    // concrete 2D square shape class
     class Square : public TwoDimentionalShape {
     public:
         Square(double lenghtOfSide);
-        virtual void display();
-        virtual double getArea();
+        virtual void display() const;
+        virtual double getArea() const;
     private:
         double lengthOfSide;
     };
-
-    class Sphere : public ThreeDimantionalShape {
+    // concrete 3D sphere shape class
+    class Sphere : public ThreeDimentionalShape {
     public:
         Sphere(double radius);
-        virtual void display();
-        virtual double getSurfaceArea();
-        virtual double getVolume();
+        virtual void display() const;
+        virtual double getSurfaceArea() const;
+        virtual double getVolume() const;
     private:
         double radius;
     };
-
-    class Cube : public ThreeDimantionalShape {
+    // concrete 3D cube shape class
+    class Cube : public ThreeDimentionalShape {
     public:
         Cube(double lengthOfSide);
-        virtual void display();
-        virtual double getSurfaceArea();
-        virtual double getVolume();
+        virtual void display() const;
+        virtual double getSurfaceArea() const;
+        virtual double getVolume() const;
     private:
         double lengthOfSide;
     };
