@@ -10,42 +10,18 @@
 Project1::Coin::Coin(CoinType denomination)
     : denomination(denomination)
 {
-    switch (denomination) 
-    {
-        case COINTYPE_PENNY:
-        this->denomination = CoinType::COINTYPE_PENNY;
-    
-
-        break;
-        default:
-        COINTYPE_WOODEN_NICKEL:
-            this->denomination = COINTYPE_WOODEN_NICKEL;
-
-        /*
-        COINTYPE_WOODEN_NICKEL = 0,
-            COINTYPE_PENNY = 1,
-            COINTYPE_NICKEL = 5,
-            COINTYPE_DIME = 10,
-            COINTYPE_QUARTER = 25,
-            COINTYPE_HALF_DOLLAR = 50,
-            COINTYPE_DOLLAR = 100
-        */
-
-    }
     // TODO: Implement
-    
 }
 
 Project1::Coin::CoinType
-Project1::Coin::getDenomination() const
-{
-    // TODO: Implement
-    return CoinType::COINTYPE_DIME;
+Project1::Coin::getDenomination() const {
+    // Returns the type of this coin.
+    return Project1::Coin::denomination;
     }
 
 unsigned
 Project1::Coin::getValueCents() const
 {
-    // TODO: Implement
-    return 0;
+    // Returns the value of the coin in cents.
+    return Project1::Coin::denomination;
 }

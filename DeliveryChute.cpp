@@ -9,33 +9,53 @@
 
 Project1::DeliveryChute::DeliveryChute(StatusPanel &statusPanel)
     : statusPanel(statusPanel),
-      pProduct(0)
+    pProduct(0)
 {
-    // TODO: Implement
+    // Constructor. Creates an empty delivery chute.
 }
 
 Project1::DeliveryChute::~DeliveryChute()
 {
-    // TODO: Implement
+    // Destructor. Destroys the delivery chute.
 }
 
 bool
 Project1::DeliveryChute::insertProduct(Product *pProduct)
 {
-    // TODO: Implement
-    return false;
+    /*Places the given product in the chute if the chute is currently
+    empty.  If the chute is not empty MESSAGECODE_CHUTE_FULL will
+    be output to the status panel.  Returns whether the product was
+    successfully inserted into the chute.*/
+    if (containsProduct()) { 
+        statusPanel.displayMessage(statusPanel.MESSAGECODE_CHUTE_FULL);
+        return false;
+    }
+    else {
+        Project1::DeliveryChute::pProduct = pProduct;
+        return true;
+    }
 }
 
 Project1::Product *
 Project1::DeliveryChute::retrieveProduct()
 {
-    // TODO: Implement
-    return 0;
+    // Returns the product currently in the chute.
+    Product *newProduct = nullptr;
+    if (containsProduct()) {
+        newProduct = new Product(
+            Project1::DeliveryChute::pProduct->getBrand(),
+            Project1::DeliveryChute::pProduct->getName(),
+            Project1::DeliveryChute::pProduct->getSize()
+        );
+        pProduct = nullptr;
+    }
+    return newProduct;
 }
 
 bool
 Project1::DeliveryChute::containsProduct() const
 {
-    // TODO: Implement
+    // Returns whether the chute currently contains a product waiting to be retrieved.
+    if (Project1::DeliveryChute::pProduct != nullptr) { return true; }
     return false;
 }
