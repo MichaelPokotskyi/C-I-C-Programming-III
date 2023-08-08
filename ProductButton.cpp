@@ -17,21 +17,18 @@ using std::strcpy;
 #include "ProductButton.h"
 
 Project1::ProductButton::ProductButton(ProductRack &productRack)
-    : productRack(productRack)
-{
+    : productRack(productRack) {
     // Creates a product button associated with the given product rack.
 }
 
 bool
-Project1::ProductButton::press()
-{
-    // TODO: Implement
-    return false;
+Project1::ProductButton::press() {
+    // Causes the associated product rack to deliver its next available product.
+    return productRack.Project1::ProductRack::deliverProduct();
 }
 
 unsigned
-Project1::ProductButton::getProductPriceCents() const
-{
-    // TODO: Implement
-    return 0;
+Project1::ProductButton::getProductPriceCents() const {
+    // Returns the price of products in the associated product rack.
+    return productRack.Project1::ProductRack::getProductPriceCents();
 }
