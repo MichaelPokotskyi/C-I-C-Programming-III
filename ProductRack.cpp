@@ -28,8 +28,7 @@ Project1::ProductRack::ProductRack(
 Project1::ProductRack::~ProductRack()
 {
     // Destructor.   Destroys the product rack.
-    for (size_t i = 0; i < Project1::ProductRack::productCount; i++)
-    {
+    for (size_t i = 0; i < Project1::ProductRack::productCount; i++) {
         delete Project1::ProductRack::products[i];
     }
 }
