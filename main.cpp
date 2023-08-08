@@ -46,7 +46,7 @@ int main()
     Project1UnitTest::TestDeliveryChute();
     Project1UnitTest::TestProductRack();
     //Project1UnitTest::TestProductButton();
-    //Project1UnitTest::TestStatusPanel();
+    Project1UnitTest::TestStatusPanel();
     //Project1UnitTest::TestVendingMachine();
 
     // Display test results

@@ -10,7 +10,7 @@
 Project1::Coin::Coin(CoinType denomination)
     : denomination(denomination)
 {
-    // TODO: Implement
+    // Constructor. Initializes the coin's denomination to the given type.
 }
 
 Project1::Coin::CoinType

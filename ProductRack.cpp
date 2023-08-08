@@ -27,8 +27,7 @@ Project1::ProductRack::ProductRack(
 
 Project1::ProductRack::~ProductRack()
 {
-    // Returns whether the given product name matches the name of
-    // products allowed to be stored in this rack.
+    // Destructor.   Destroys the product rack.
     for (size_t i = 0; i < Project1::ProductRack::productCount; i++)
     {
         delete Project1::ProductRack::products[i];
@@ -90,7 +89,7 @@ Project1::ProductRack::addProduct(Product *pProduct)
 bool
 Project1::ProductRack::deliverProduct()
 {
-    // Inert the next product from the rack into the delivery chute if
+    // Insert the next product from the rack into the delivery chute if
     // the delivery chute is empty and the rack is not empty.
     if (isEmpty())
     {
