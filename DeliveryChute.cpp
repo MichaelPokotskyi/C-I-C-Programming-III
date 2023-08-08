@@ -26,6 +26,7 @@ Project1::DeliveryChute::insertProduct(Product *pProduct)
     empty.  If the chute is not empty MESSAGECODE_CHUTE_FULL will
     be output to the status panel.  Returns whether the product was
     successfully inserted into the chute.*/
+
     if (containsProduct()) { 
         statusPanel.displayMessage(statusPanel.MESSAGECODE_CHUTE_FULL);
         return false;
@@ -40,15 +41,8 @@ Project1::Product *
 Project1::DeliveryChute::retrieveProduct()
 {
     // Returns the product currently in the chute.
-    Product *newProduct = nullptr;
-    if (containsProduct()) {
-        newProduct = new Product(
-            Project1::DeliveryChute::pProduct->getBrand(),
-            Project1::DeliveryChute::pProduct->getName(),
-            Project1::DeliveryChute::pProduct->getSize()
-        );
-        pProduct = nullptr;
-    }
+    Product *newProduct = pProduct;
+    pProduct = NULL;
     return newProduct;
 }
 

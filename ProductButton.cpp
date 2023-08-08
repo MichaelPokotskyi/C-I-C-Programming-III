@@ -13,7 +13,7 @@ using std::strcpy;
 Project1::ProductButton::ProductButton(ProductRack &productRack)
     : productRack(productRack)
 {
-    // TODO: Implement
+    // Creates a product button associated with the given product rack.
 }
 
 bool

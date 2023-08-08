@@ -16,9 +16,9 @@ Project1::Product::Product(const char *brand, const char *name,
     /*Creates a product of the given brand, name, and
     size.  The name identifies the product; two products with the
     same name are considered to be the same product type.*/
-    strcpy(this->brand, brand);
-    strcpy(this->name, name);
-    strcpy(this->size, size);
+    strcpy(Project1::Product::brand, brand);
+    strcpy(Project1::Product::name, name);
+    strcpy(Project1::Product::size, size);
 }
 
 const char *
