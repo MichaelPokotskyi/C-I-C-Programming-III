@@ -72,7 +72,7 @@ Project1::ProductRack::addProduct(Product *pProduct) {
         statusPanel.displayMessage(StatusPanel::MESSAGECODE_RACK_IS_FULL);
         return false;
     }
-    else if (not isCompatibleProduct(pProduct->getName())) {
+    else if (!isCompatibleProduct(pProduct->getName())) {
         statusPanel.displayMessage(StatusPanel::MESSAGECODE_PRODUCT_DOES_NOT_MATCH_PRODUCT_RACK);
         return false;
     }
@@ -92,7 +92,7 @@ Project1::ProductRack::deliverProduct()
         return false;
     } 
     else if (Project1::ProductRack::deliveryChute.insertProduct(Project1::ProductRack::products[Project1::ProductRack::productCount - 1])) {
-        --Project1::ProductRack::productCount;
+        Project1::ProductRack::productCount--;
         return true;
     }
     else {
