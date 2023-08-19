@@ -9,13 +9,26 @@
 // Tests for Array class implementation.
 
 
-#include <iostream>
 #include "Array.h"
+#include <iostream>
+#include <stdexcept>
 
+using std::cerr;
 using std::cout;
-using std::endl;
+using std::invalid_argument;
 using namespace MichaelPokotskyi;
+const int SIZE = 5;
+
 
 int main() {
-    Array<int, 5> arrayOfFiveInts;
+    Array<int, SIZE> arrayOfFiveInts;
+
+    // Modifying by L-value operator
+    for (int i = 0; i < SIZE; i++) {
+        arrayOfFiveInts[i] = i;
+    }
+
+
+
+
 }
