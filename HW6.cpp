@@ -30,12 +30,14 @@ int main() {
         arrayOfFiveInts[i] = i;
     }
 
+    // not equal to initial one
     for (int i = 0; i < SIZE; i++) {
-        anotherArrayOfFiveInts[i] = i+1;
+        anotherArrayOfFiveInts[i] = i + 1;
     }
 
     // = copy constructor
     copyArrayOfFiveInts = arrayOfFiveInts;
+    cout << "Testing copy constructor: ";
     for (int i = 0; i < SIZE; i++) {
         cout << copyArrayOfFiveInts[i];
         if (i != (SIZE - 1)) { cout << ", "; }
