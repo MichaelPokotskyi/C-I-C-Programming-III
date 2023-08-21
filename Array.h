@@ -23,7 +23,6 @@ namespace MichaelPokotskyi {
     public:
         // default constructor
         Array() {
-
         }
         // copy constructor
         Array(ElemType source[SIZE])

@@ -40,7 +40,7 @@ int main() {
     cout << "Testing copy constructor: ";
     for (int i = 0; i < SIZE; i++) {
         cout << copyArrayOfFiveInts[i];
-        if (i != (SIZE - 1)) { cout << ", "; }
+        i != SIZE - 1 ? cout << ", " : cout << ". ";
     }
     cout << "\n";
 
