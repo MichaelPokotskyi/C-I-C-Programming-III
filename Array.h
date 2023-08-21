@@ -43,14 +43,15 @@ namespace MichaelPokotskyi {
         // == overloading
         bool operator==(const Array<ElemType, SIZE> other) const {
             for (int i = 0; i < SIZE; i++) {
-                if (this->elements[i] != other[i]) { break; return false; }
+                if (this->elements[i] != other[i]) { return false; break; }
+                //else { return true;}
             }
             return true;
         }
         // != overloading
         bool operator!=(const Array<ElemType, SIZE> other) const {
             for (int i = 0; i < SIZE; i++) {
-                if (this->elements[i] == other[i]) { break; return false; }
+                if (this->elements[i] == other[i]) { return false; break; }
             }
             return true;
         }

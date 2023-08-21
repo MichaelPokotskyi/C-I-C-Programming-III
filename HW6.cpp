@@ -22,13 +22,43 @@ const int SIZE = 5;
 
 int main() {
     Array<int, SIZE> arrayOfFiveInts;
+    Array<int, SIZE> copyArrayOfFiveInts;
+    Array<int, SIZE> anotherArrayOfFiveInts;
 
     // Modifying by L-value operator
     for (int i = 0; i < SIZE; i++) {
         arrayOfFiveInts[i] = i;
     }
 
+    for (int i = 0; i < SIZE; i++) {
+        anotherArrayOfFiveInts[i] = i+1;
+    }
 
+    // = copy constructor
+    copyArrayOfFiveInts = arrayOfFiveInts;
+    for (int i = 0; i < SIZE; i++) {
+        cout << copyArrayOfFiveInts[i];
+        if (i != (SIZE - 1)) { cout << ", "; }
+    }
+    cout << "\n";
 
+    // ==
+    cout << "Does the copyArrayOfFiveInts are == arrayOfFiveInts? ";
+    if (copyArrayOfFiveInts == arrayOfFiveInts) { cout << "TRUE!"; }
+    else { cout << "FALSE!"; }
+    cout << "\n";
+    cout << "Does the copyArrayOfFiveInts are == anotherArrayOfFiveInts? ";
+     if (copyArrayOfFiveInts == anotherArrayOfFiveInts) { cout << "TRUE!"; }
+    else { cout << "FALSE!"; }
+    cout << "\n";
 
+    // !=
+    cout << "Does the copyArrayOfFiveInts are != arrayOfFiveInts? ";
+    if (copyArrayOfFiveInts != arrayOfFiveInts) { cout << "TRUE!"; }
+    else { cout << "FALSE!"; }
+    cout << "\n";
+    cout << "Does the copyArrayOfFiveInts are != anotherArrayOfFiveInts? ";
+    if (copyArrayOfFiveInts != anotherArrayOfFiveInts) { cout << "TRUE!"; }
+    else { cout << "FALSE!"; }
+    cout << "\n";
 }
