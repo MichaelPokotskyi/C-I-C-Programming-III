@@ -25,9 +25,17 @@ int main() {
     Array<int, SIZE> copyArrayOfFiveInts;
     Array<int, SIZE> anotherArrayOfFiveInts;
 
-    // Modifying by L-value operator
+
+    // Modifying by LValue operator
     for (int i = 0; i < SIZE; i++) {
         arrayOfFiveInts[i] = i;
+    }
+
+    // RValue subscript output
+    cout << "RValue subscript output: ";
+    for (int i = 0; i < SIZE; i++) {
+        cout << arrayOfFiveInts[i];
+        i != SIZE - 1 ? cout << ", " : cout << ". \n";
     }
 
     // not equal to initial one
@@ -35,32 +43,60 @@ int main() {
         anotherArrayOfFiveInts[i] = i + 1;
     }
 
-    // = copy constructor
+    // = copy constructor test
     copyArrayOfFiveInts = arrayOfFiveInts;
     cout << "Testing copy constructor: ";
     for (int i = 0; i < SIZE; i++) {
         cout << copyArrayOfFiveInts[i];
-        i != SIZE - 1 ? cout << ", " : cout << ". ";
+        i != SIZE - 1 ? cout << ", " : cout << ". \n";
     }
-    cout << "\n";
 
-    // ==
+    // == operator test
     cout << "Does the copyArrayOfFiveInts are == arrayOfFiveInts? ";
-    if (copyArrayOfFiveInts == arrayOfFiveInts) { cout << "TRUE!"; }
-    else { cout << "FALSE!"; }
-    cout << "\n";
+    if (copyArrayOfFiveInts == arrayOfFiveInts) { cout << "TRUE!\n"; }
+    else { cout << "FALSE!\n"; }
+    
     cout << "Does the copyArrayOfFiveInts are == anotherArrayOfFiveInts? ";
-     if (copyArrayOfFiveInts == anotherArrayOfFiveInts) { cout << "TRUE!"; }
-    else { cout << "FALSE!"; }
-    cout << "\n";
+     if (copyArrayOfFiveInts == anotherArrayOfFiveInts) { cout << "TRUE!\n"; }
+    else { cout << "FALSE!\n"; }
 
-    // !=
+    // != operator test
     cout << "Does the copyArrayOfFiveInts are != arrayOfFiveInts? ";
-    if (copyArrayOfFiveInts != arrayOfFiveInts) { cout << "TRUE!"; }
-    else { cout << "FALSE!"; }
-    cout << "\n";
+    if (copyArrayOfFiveInts != arrayOfFiveInts) { cout << "TRUE!\n"; }
+    else { cout << "FALSE!\n"; }
     cout << "Does the copyArrayOfFiveInts are != anotherArrayOfFiveInts? ";
-    if (copyArrayOfFiveInts != anotherArrayOfFiveInts) { cout << "TRUE!"; }
-    else { cout << "FALSE!"; }
-    cout << "\n";
+    if (copyArrayOfFiveInts != anotherArrayOfFiveInts) { cout << "TRUE!\n"; }
+    else { cout << "FALSE!\n"; }
+
+    // index access < 0 assign test
+    try {
+        arrayOfFiveInts[-1] = 10;
+    }
+    catch (invalid_argument &ex) {
+        cerr << ex.what() << "\n";
+    }
+
+    // index access < 0 output test
+    try {
+        cout << arrayOfFiveInts[-1] << "\n";
+    }
+    catch (invalid_argument &ex) {
+        cerr << ex.what() << "\n";
+    }
+
+    // index access >= SIZE output test
+    try {
+        cout << arrayOfFiveInts[SIZE] << "\n";
+    }
+    catch (invalid_argument &ex) {
+        cerr << ex.what() << "\n";
+    }
+
+    // index access > 0 assign test
+    try {
+        arrayOfFiveInts[SIZE] = 10;
+    }
+    catch (invalid_argument& ex) {
+        cerr << ex.what() << "\n";
+    }
 }
