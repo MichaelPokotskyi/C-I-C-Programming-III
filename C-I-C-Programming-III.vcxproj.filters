@@ -72,6 +72,12 @@
     <ClCompile Include="HW6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StringUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HW7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h">
@@ -114,6 +120,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Array.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtility.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

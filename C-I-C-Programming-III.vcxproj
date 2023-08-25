@@ -28,6 +28,7 @@
     <ClCompile Include="HW4.cpp" />
     <ClCompile Include="HW5.cpp" />
     <ClCompile Include="HW6.cpp" />
+    <ClCompile Include="HW7.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
@@ -35,6 +36,7 @@
     <ClCompile Include="SavingsAccount.cpp" />
     <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="StatusPanel.cpp" />
+    <ClCompile Include="StringUtility.cpp" />
     <ClCompile Include="TestFramework.cpp" />
     <ClCompile Include="UnitTest.cpp" />
     <ClCompile Include="VendingMachine.cpp" />
@@ -51,6 +53,7 @@
     <ClInclude Include="SavingsAccount.h" />
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="StatusPanel.h" />
+    <ClInclude Include="StringUtility.h" />
     <ClInclude Include="TestFramework.h" />
     <ClInclude Include="UnitTest.h" />
     <ClInclude Include="VendingMachine.h" />
