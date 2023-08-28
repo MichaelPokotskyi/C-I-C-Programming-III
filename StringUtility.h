@@ -12,14 +12,20 @@
 #ifndef STRINGUTILITY_H
 #define STRINGUTILITY_H
 
-//using std::ostream;
-//using std::istream;
+using std::string;
+using std::vector;
 
 // defined namespace
 namespace MichaelPokotskyi
 {
-    class Complex {
-
+    class StringUtility
+    {
+    public:
+        // function prototypes
+        string join(const vector<string>&str, char delim);
+        vector<string> reverse(const vector<string>& str);
+        vector<string> combine(const vector<string>& left, const vector<string>& right);
+        vector<string> leftPad(const vector<string>& str, char pad);
     };
 }
 #endif
