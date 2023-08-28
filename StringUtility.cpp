@@ -41,30 +41,30 @@ vector<string>
 MichaelPokotskyi::StringUtility::combine(const vector<string>& left, const
     vector<string>& right)
 {
-    vector<string> retval;
-    for (unsigned int idx = 0; idx < left.size(); idx++)
-        for (unsigned int idx2 = 0; idx2 < right.size(); idx2++)
-            retval.push_back(left[idx] + right[idx2]);
-    return retval;
+    vector<string> str;
+    for (unsigned int i = 0; i < left.size(); i++)
+        for (unsigned int j = 0; j < right.size(); j++)
+            str.push_back(left[i] + right[j]);
+    return str;
 }
 
-// Leftpad Function
+// leftpad
 vector<string>
 MichaelPokotskyi::StringUtility::leftPad(const vector<string>& strVect, char pad)
 {
-    vector<string> retval;
+    vector<string> vec;
     unsigned int maxSize = 0;
     // Find max size
-    for (unsigned int idx = 0; idx < strVect.size(); idx++) {
-        if (strVect[idx].size() > maxSize)
-            maxSize = strVect[idx].size();
+    for (unsigned int i = 0; i < strVect.size(); i++) {
+        if (strVect[i].size() > maxSize)
+            maxSize = strVect[i].size();
     }
 
     // Add padding
-    for (unsigned int idx = 0; idx < strVect.size(); idx++) {
-        retval.push_back("");
-        retval[idx].insert(0, maxSize - strVect[idx].size(), pad);
-        retval[idx] += strVect[idx];
+    for (unsigned int i = 0; i < strVect.size(); i++) {
+        vec.push_back("");
+        vec[i].insert(0, maxSize - strVect[i].size(), pad);
+        vec[i] += strVect[i];
     }
-    return retval;
+    return vec;
 }
