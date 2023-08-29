@@ -12,7 +12,10 @@
 #ifndef STRINGUTILITY_H
 #define STRINGUTILITY_H
 
+#include<string>
 using std::string;
+
+#include<vector>
 using std::vector;
 
 // defined namespace

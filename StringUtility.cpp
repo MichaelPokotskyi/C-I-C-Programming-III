@@ -8,16 +8,18 @@
 //
 // StringUtility function implementation.
 
-#include<string>
-#include<vector>
 #include "StringUtility.h"
+#include<string>
+using std::string;
+#include<vector>
+using std::vector;
+using std::swap;
 
 // join
 string
-MichaelPokotskyi::StringUtility::join(const vector<string>& strVect, char delim)
-{
+MichaelPokotskyi::StringUtility::join(const vector<string>& strVect, char delim) {
     string str;
-    for (unsigned int i = 0; i < strVect.size(); i++) {
+    for (int i = 0; i < strVect.size(); i++) {
         str += strVect[i];
         if ((i + 1) < strVect.size())
             str += delim;
@@ -27,41 +29,47 @@ MichaelPokotskyi::StringUtility::join(const vector<string>& strVect, char delim)
 
 // reverse
 vector<string>
-MichaelPokotskyi::StringUtility::reverse(const vector<string>& strVect)
-{
+MichaelPokotskyi::StringUtility::reverse(const vector<string>& strVect) {
     vector<string> vec;
-    for (unsigned int i = 0; i < strVect.size(); i++) {
+    for (int i = 0; i < strVect.size(); i++) {
         vec.push_back(strVect[(strVect.size() - 1) - i]);
+    }
+    for (int i = 0; i < vec.size(); i++) {
+        string temp = vec[i];
+        int k = temp.size() - 1, l = 0;
+        while (l <= k) {
+            swap(temp[l], temp[k]);
+            k = k - 1;
+            l = l + 1;
+        }
+        vec[i] = temp;
     }
     return vec;
 }
 
 // combine
 vector<string>
-MichaelPokotskyi::StringUtility::combine(const vector<string>& left, const
-    vector<string>& right)
-{
+MichaelPokotskyi::StringUtility::combine(const vector<string>& left, 
+    const vector<string>& right) {
     vector<string> str;
-    for (unsigned int i = 0; i < left.size(); i++)
-        for (unsigned int j = 0; j < right.size(); j++)
+    for (int i = 0; i < left.size(); i++)
+        for (int j = 0; j < right.size(); j++)
             str.push_back(left[i] + right[j]);
     return str;
 }
 
 // leftpad
 vector<string>
-MichaelPokotskyi::StringUtility::leftPad(const vector<string>& strVect, char pad)
-{
+MichaelPokotskyi::StringUtility::leftPad(const vector<string>& strVect, char pad) {
     vector<string> vec;
-    unsigned int maxSize = 0;
-    // Find max size
-    for (unsigned int i = 0; i < strVect.size(); i++) {
+    int maxSize = 0;
+    // find max size
+    for (int i = 0; i < strVect.size(); i++) {
         if (strVect[i].size() > maxSize)
             maxSize = strVect[i].size();
     }
-
-    // Add padding
-    for (unsigned int i = 0; i < strVect.size(); i++) {
+    // add padding
+    for (int i = 0; i < strVect.size(); i++) {
         vec.push_back("");
         vec[i].insert(0, maxSize - strVect[i].size(), pad);
         vec[i] += strVect[i];
