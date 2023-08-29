@@ -31,9 +31,11 @@ MichaelPokotskyi::StringUtility::join(const vector<string>& strVect, char delim)
 vector<string>
 MichaelPokotskyi::StringUtility::reverse(const vector<string>& strVect) {
     vector<string> vec;
+    // reverse vector elements
     for (int i = 0; i < strVect.size(); i++) {
         vec.push_back(strVect[(strVect.size() - 1) - i]);
     }
+    // reverse chars each element
     for (int i = 0; i < vec.size(); i++) {
         string temp = vec[i];
         int k = temp.size() - 1, l = 0;
