@@ -43,5 +43,4 @@ namespace MichaelPokotskyi
   istream &operator>>(istream &in, Person &person);
   ostream &operator<<(ostream &out, const Person &person);
 }
-
 #endif
