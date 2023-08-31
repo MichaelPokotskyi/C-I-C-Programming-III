@@ -29,7 +29,9 @@
     <ClCompile Include="HW5.cpp" />
     <ClCompile Include="HW6.cpp" />
     <ClCompile Include="HW7.cpp" />
+    <ClCompile Include="HW8.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
     <ClCompile Include="ProductRack.cpp" />
@@ -47,6 +49,7 @@
     <ClInclude Include="Complex.h" />
     <ClInclude Include="Date_HW2.h" />
     <ClInclude Include="DeliveryChute.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductButton.h" />
     <ClInclude Include="ProductRack.h" />
