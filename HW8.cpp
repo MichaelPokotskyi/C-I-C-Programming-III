@@ -15,19 +15,24 @@ using std::ifstream;
 
 #include <iostream>
 using std::cout;
+using std::cerr;
 using std::endl;
 
 
 int main()
 {
-  //stringstream output;
-  string temp;
+  // stringstream output
+  string buf;
   ifstream input ("hw8-input.txt");
 
-  if (input.is_open()) {
-    while (getline(input, temp)) {
-      cout << temp << endl;
-    }
-    input.close();
+  // exit if open failed
+  if (!input) {
+      cerr << "Error opening file!\n";
+      exit(1);
   }
+  // reading data lines
+  while (getline(input, buf)) {
+          cout << buf << endl;
+  }
+  // file will be closed automatically
 }

@@ -15,20 +15,20 @@ using std::fixed;
 using std::showpoint;
 using std::setprecision;
 
+// constructor
 MichaelPokotskyi::Person::Person(string firstName, string lastName, int  ageYears,
                                    double heightInches, double weightPounds):
     firstName(firstName), lastName(lastName), ageYears(ageYears),
-    heightInches(heightInches), weightPounds(weightPounds) 
-{
+    heightInches(heightInches), weightPounds(weightPounds) {
 }
 
-// Overloaded stream extraction operator
+// overload extraction operator
 istream &
 MichaelPokotskyi::operator>>(istream &in, Person &person) {
   return in;
 }
 
-// Overloaded stream insertion operator
+// overload insertion operator
 ostream &
 MichaelPokotskyi::operator<<(ostream &out, const Person &person) {
   out << fixed << showpoint << setprecision(2) << person.firstName << " " <<

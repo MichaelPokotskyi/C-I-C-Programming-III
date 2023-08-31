@@ -23,7 +23,7 @@ using std::ostream;
 namespace MichaelPokotskyi 
 {
   class Person {
-    // friend function stream operator overloads
+    // friend function operator overload
     friend istream &operator>>(istream &in, Person &person);
     friend ostream &operator<<(ostream &out, const Person &person);
   public:
@@ -31,7 +31,7 @@ namespace MichaelPokotskyi
     Person(string firstName, string lastName, int ageYears,
            double heightInches, double weightPounds);
   private:
-    // Private data members
+    // class fields
     string firstName;
     string lastName;
     int ageYears;
@@ -39,7 +39,7 @@ namespace MichaelPokotskyi
     double weightPounds;
   };
 
-  // friend function stream operator overloads
+  // friend function operator overload
   istream &operator>>(istream &in, Person &person);
   ostream &operator<<(ostream &out, const Person &person);
 }
