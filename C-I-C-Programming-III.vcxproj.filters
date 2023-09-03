@@ -21,7 +21,7 @@
     <ClCompile Include="DeliveryChute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="main_PR1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Product.cpp">
@@ -36,10 +36,10 @@
     <ClCompile Include="StatusPanel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestFramework.cpp">
+    <ClCompile Include="TestFramework_PR1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTest.cpp">
+    <ClCompile Include="UnitTest_PR1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VendingMachine.cpp">
@@ -84,6 +84,54 @@
     <ClCompile Include="Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PR2\AngularSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\ConstantSignal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\DataRecorder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\MonitoringSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\PeriodicSignal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\PressureSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\SawtoothSignal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\Sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\Signal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\SineSignal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\TemperatureSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\TestFramework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\Time.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\UnitTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PR2\VibrationSensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h">
@@ -104,10 +152,10 @@
     <ClInclude Include="StatusPanel.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="TestFramework.h">
+    <ClInclude Include="TestFramework_PR1.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="UnitTest.h">
+    <ClInclude Include="UnitTest_PR1.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="VendingMachine.h">
@@ -132,6 +180,51 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\AngularSensor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\ConstantSignal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\DataRecorder.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\MonitoringSystem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\PeriodicSignal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\PressureSensor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\SawtoothSignal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\Sensor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\Signal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\SineSignal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\TemperatureSensor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\TestFramework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\Time.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\UnitTest.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PR2\VibrationSensor.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

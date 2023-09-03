@@ -1,5 +1,5 @@
 /*
-* Vending Machine Project
+* Airplane Monitoring System Project
 * CSE-40477
 *
 * TestFramework.h
@@ -17,8 +17,7 @@ using std::string;
 #include <vector>
 using std::vector;
 
-#define TEST_ASSERT(condition) \
-    (TestFramework::Assert(condition, __FILE__, __LINE__))
+#define TEST_ASSERT(condition) (TestFramework::Assert(condition, __FILE__, __LINE__))
 
 class TestFramework
 {

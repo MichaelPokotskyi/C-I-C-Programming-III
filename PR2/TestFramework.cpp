@@ -1,5 +1,5 @@
 /*
-* Vending Machine Project
+* Airplane Monitoring System Project
 * CSE-40477
 *
 * TestFramework.cpp
@@ -24,14 +24,12 @@ bool TestFramework::passed = true;
 unsigned TestFramework::totalTestsPassed = 0;
 unsigned TestFramework::totalTestsFailed = 0;
 
-void
-TestFramework::Initialize(ostream *pos)
+void TestFramework::Initialize(ostream *pos)
 {
     TestFramework::pos = pos;
 }
 
-void
-TestFramework::BeginTest(string name)
+void TestFramework::BeginTest(string name)
 {
     *TestFramework::pos << ">>>>>> Beginning test '" << name << "'" << endl;
 
@@ -40,8 +38,7 @@ TestFramework::BeginTest(string name)
     TestFramework::passed = true;
 }
 
-bool
-TestFramework::Assert(bool condition, string file, unsigned line)
+bool TestFramework::Assert(bool condition, string file, unsigned line)
 {
     if (!condition)
     {
@@ -54,8 +51,7 @@ TestFramework::Assert(bool condition, string file, unsigned line)
     return condition;
 }
 
-void
-TestFramework::EndTest()
+void TestFramework::EndTest()
 {
     if (TestFramework::passed)
     {
@@ -69,21 +65,15 @@ TestFramework::EndTest()
     // Display assertionResults
     for (size_t i = 0; i < TestFramework::assertionResults.size(); ++i)
     {
-        *TestFramework::pos << "\t" << TestFramework::assertionResults[i]
-        << endl;
+        *TestFramework::pos << "\t" << TestFramework::assertionResults[i] << endl;
     }
 
     // Display test result
-    *TestFramework::pos << "<<<<<< Ending test '" << TestFramework::name
-        << "' ";
-    *TestFramework::pos << "---> "
-        << (TestFramework::passed ? "Passed" : "FAILED") << endl << endl;
+    *TestFramework::pos << "<<<<<< Ending test '" << TestFramework::name << "' ";
+    *TestFramework::pos << "---> " << (TestFramework::passed ? "Passed" : "FAILED") << endl << endl;
 }
 
-void
-TestFramework::DisplaySummary()
+void TestFramework::DisplaySummary()
 {
-    *TestFramework::pos << TestFramework::totalTestsPassed
-        << " tests passed, " << TestFramework::totalTestsFailed
-        << " tests failed" << endl << endl;
+    *TestFramework::pos << TestFramework::totalTestsPassed << " tests passed, " << TestFramework::totalTestsFailed << " tests failed" << endl << endl;
 }

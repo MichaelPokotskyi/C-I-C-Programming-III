@@ -30,8 +30,24 @@
     <ClCompile Include="HW6.cpp" />
     <ClCompile Include="HW7.cpp" />
     <ClCompile Include="HW8.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_PR1.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="PR2\AngularSensor.cpp" />
+    <ClCompile Include="PR2\ConstantSignal.cpp" />
+    <ClCompile Include="PR2\DataRecorder.cpp" />
+    <ClCompile Include="PR2\main.cpp" />
+    <ClCompile Include="PR2\MonitoringSystem.cpp" />
+    <ClCompile Include="PR2\PeriodicSignal.cpp" />
+    <ClCompile Include="PR2\PressureSensor.cpp" />
+    <ClCompile Include="PR2\SawtoothSignal.cpp" />
+    <ClCompile Include="PR2\Sensor.cpp" />
+    <ClCompile Include="PR2\Signal.cpp" />
+    <ClCompile Include="PR2\SineSignal.cpp" />
+    <ClCompile Include="PR2\TemperatureSensor.cpp" />
+    <ClCompile Include="PR2\TestFramework.cpp" />
+    <ClCompile Include="PR2\Time.cpp" />
+    <ClCompile Include="PR2\UnitTest.cpp" />
+    <ClCompile Include="PR2\VibrationSensor.cpp" />
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="ProductButton.cpp" />
     <ClCompile Include="ProductRack.cpp" />
@@ -39,8 +55,8 @@
     <ClCompile Include="Shapes.cpp" />
     <ClCompile Include="StatusPanel.cpp" />
     <ClCompile Include="StringUtility.cpp" />
-    <ClCompile Include="TestFramework.cpp" />
-    <ClCompile Include="UnitTest.cpp" />
+    <ClCompile Include="TestFramework_PR1.cpp" />
+    <ClCompile Include="UnitTest_PR1.cpp" />
     <ClCompile Include="VendingMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +66,21 @@
     <ClInclude Include="Date_HW2.h" />
     <ClInclude Include="DeliveryChute.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="PR2\AngularSensor.h" />
+    <ClInclude Include="PR2\ConstantSignal.h" />
+    <ClInclude Include="PR2\DataRecorder.h" />
+    <ClInclude Include="PR2\MonitoringSystem.h" />
+    <ClInclude Include="PR2\PeriodicSignal.h" />
+    <ClInclude Include="PR2\PressureSensor.h" />
+    <ClInclude Include="PR2\SawtoothSignal.h" />
+    <ClInclude Include="PR2\Sensor.h" />
+    <ClInclude Include="PR2\Signal.h" />
+    <ClInclude Include="PR2\SineSignal.h" />
+    <ClInclude Include="PR2\TemperatureSensor.h" />
+    <ClInclude Include="PR2\TestFramework.h" />
+    <ClInclude Include="PR2\Time.h" />
+    <ClInclude Include="PR2\UnitTest.h" />
+    <ClInclude Include="PR2\VibrationSensor.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="ProductButton.h" />
     <ClInclude Include="ProductRack.h" />
@@ -57,8 +88,8 @@
     <ClInclude Include="Shapes.h" />
     <ClInclude Include="StatusPanel.h" />
     <ClInclude Include="StringUtility.h" />
-    <ClInclude Include="TestFramework.h" />
-    <ClInclude Include="UnitTest.h" />
+    <ClInclude Include="TestFramework_PR1.h" />
+    <ClInclude Include="UnitTest_PR1.h" />
     <ClInclude Include="VendingMachine.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
